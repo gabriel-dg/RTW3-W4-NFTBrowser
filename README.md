@@ -13,7 +13,7 @@
 
 ## Open issues & tweaks:
 
-- // TODO: Make process.env work !! (not common key nor REACT_APP_ are working...)
+- // TODO: Make process.env work !! (not common key nor REACT_APP_ are working with process.env)
 - // TODO: Search per account "From" value is not not...
 - // TODO: On Collection search: Check behavior when nextToken is not present -> then there are no more NFTs to fetch.
 - // TODO: Use "unknown" value for "Entries" on Collection pagination bar
