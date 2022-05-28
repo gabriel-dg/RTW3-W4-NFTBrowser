@@ -7,14 +7,12 @@
 * How to use RESTful API calls via Alchemy NFT API to fetch and display NFTs
 * How to style your website with Next JS and Tailwind CSS
 
-
 ![Screenshot](screenshot.png)
-
 
 ---
 
-
 ## Open issues & tweaks:
+<span style="font-family:Papyrus; font-size:4em;">## Open issues & tweaks:</span>
 
 * // TODO: Make process.env work !! (not common key nor REACT_APP_ are working with process.env)
 * // TODO: Search per account "From" value is not not...
@@ -24,9 +22,7 @@
 * // TODO: Implenment Prev button for fetchNFTs search-> Keep previous startToken for pagination PREV (should be an array storing all previous nextToken)
 * // TODO: Prev button: "Showing" & "To" increases instead of decreasing
 
-
 ---
-
 
 ## How to use
 
