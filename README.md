@@ -10,13 +10,13 @@
 
 ## Open issues & tweaks:
 
-// TODO: Make process.env work !! (not common key nor REACT_APP_ are working...)
-// TODO: Search per account "From" value is not not...
-// TODO: On Collection search: Check behavior when nextToken is not present -> then there are no more NFTs to fetch.
-// TODO: Use "unknown" value for "Entries" on Collection pagination bar
-// TODO: Use a generic image when there's no metadata
-// TODO: Implenment Prev button for fetchNFTs search-> Keep previous startToken for pagination PREV (should be an array storing all previous nextToken)
-// TODO: Prev button: "Showing" & "To" increases instead of decreasing
+- // TODO: Make process.env work !! (not common key nor REACT_APP_ are working...)
+- // TODO: Search per account "From" value is not not...
+- // TODO: On Collection search: Check behavior when nextToken is not present -> then there are no more NFTs to fetch.
+- // TODO: Use "unknown" value for "Entries" on Collection pagination bar
+- // TODO: Use a generic image when there's no metadata
+- // TODO: Implenment Prev button for fetchNFTs search-> Keep previous startToken for pagination PREV (should be an array storing all previous nextToken)
+- // TODO: Prev button: "Showing" & "To" increases instead of decreasing
 
 
 ## How to use
