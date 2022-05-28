@@ -1,6 +1,6 @@
 // FIXME: Error on Search when Wallet and Collection address are filled but "Fetch for Collection" is unchecked
 // FIXME: Look for a valid condition to catch fetchNFTs first run (to use in fromNFT value for Pagination bar)
-// TODO: Make process.env work !! (not common key nor REACT_APP_ are working with process.env)
+
 // TODO: Search per account "From" value is not not...
 // TODO: On Collection search: Check behavior when nextToken is not present -> then there are no more NFTs to fetch.
 // TODO: Use "unknown" value for "Entries" on Collection pagination bar
@@ -39,7 +39,7 @@ const Home = () => {
     console.log("PageKey: ", pagekey);
 
     // FIXME: 
-    const api_key = process.env.REACT_APP_API_KEY;
+    const api_key = process.env.NEXT_PUBLIC_API_KEY;
     const baseURL = `https://eth-mainnet.alchemyapi.io/v2/${api_key}/getNFTs/`;
 
     if (!collection.length) {
@@ -90,7 +90,7 @@ const Home = () => {
       };
 
       // FIXME: 
-      const api_key = process.env.REACT_APP_API_KEY;
+      const api_key = process.env.NEXT_PUBLIC_API_KEY;
       const baseURL = `https://eth-mainnet.alchemyapi.io/v2/${api_key}/getNFTsForCollection/`;
 
       const fetchURL = `${baseURL}?contractAddress=${collection}&withMetadata=${"true"}&startToken=${startToken}`;
