@@ -1,5 +1,4 @@
 // TODO: Make process.env work !!
-// TODO: Eliminate the "0" when the Cards are empty
 // TODO: Check From/To/Tot values on Pagination bar -> Per User search From is not working...
 // TODO: Check when nextToken is not present -> then there are no more NFTs to fetch.
 // TODO: Use "unknown" for Entries on Collection pagination bar
@@ -220,7 +219,7 @@ const Home = () => {
 
       {/* ======================== Call the NFT Cards =============== */}
       <div className='flex flex-wrap gap-y-12 mt-4 w-5/6 gap-x-2 justify-center'>
-        {NFTs.length && NFTs.map(nft => { return (<NFTCard nft={nft}></NFTCard>) })}
+        {NFTs.length > 0 && NFTs.map(nft => { return (<NFTCard nft={nft}></NFTCard>) })}
       </div>
     </div>
   )
