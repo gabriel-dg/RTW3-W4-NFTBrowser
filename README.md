@@ -8,6 +8,9 @@
 - How to style your website with Next JS and Tailwind CSS
 
 
+![Screenshot](screenshot.png)
+
+
 ## Open issues & tweaks:
 
 - // TODO: Make process.env work !! (not common key nor REACT_APP_ are working...)
