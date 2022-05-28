@@ -1,12 +1,29 @@
-# Next.js + Tailwind CSS Example
+# RoadToWeb3 NFT Browser
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+## This project includes:
 
-## Deploy your own
+* How to fetch NFTs that belong to a wallet address
+* How to fetch NFTs based on the collection it belongs to
+* How to use RESTful API calls via Alchemy NFT API to fetch and display NFTs
+* How to style your website with Next JS and Tailwind CSS
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+![Screenshot](screenshot.png)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+---
+
+## Open issues & tweaks:
+
+* // FIXME: Error on Search when Wallet and Collection address are filled but "Fetch for Collection" is unchecked
+* // FIXME: Look for a valid condition to catch fetchNFTs first run (to use in fromNFT value for Pagination bar)
+* // TODO: Make process.env work !! (not common key nor REACT_APP_ are working with process.env)
+* // TODO: Search per account "From" value is not not...
+* // TODO: On Collection search: Check behavior when nextToken is not present -> then there are no more NFTs to fetch.
+* // TODO: Use "unknown" value for "Entries" on Collection pagination bar
+* // TODO: Use a generic image when there's no metadata
+* // TODO: Implenment Prev button for fetchNFTs search-> Keep previous startToken for pagination PREV (should be an array storing all previous nextToken)
+* // TODO: Prev button: "Showing" & "To" increases instead of decreasing
+
+---
 
 ## How to use
 
@@ -19,5 +36,3 @@ yarn create next-app --example with-tailwindcss with-tailwindcss-app
 # or
 pnpm create next-app -- --example with-tailwindcss with-tailwindcss-app
 ```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
