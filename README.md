@@ -9,13 +9,13 @@
 
 ![Screenshot](screenshot.png)
 
----
+----
 
 ## Open issues & tweaks:
 
 * // FIXME: Error on Search when Wallet and Collection address are filled but "Fetch for Collection" is unchecked
 * // FIXME: Look for a valid condition to catch fetchNFTs first run (to use in fromNFT value for Pagination bar)
-* ~~ // TODO: Make process.env work !! ~~
+* ~~ // TODO: Make process.env work !! Solved: use NEXT_PUBLIC_~~
 * // TODO: Search per account "From" value is not not...
 * // TODO: On Collection search: Check behavior when nextToken is not present -> then there are no more NFTs to fetch.
 * // TODO: Use "unknown" value for "Entries" on Collection pagination bar
@@ -23,7 +23,7 @@
 * // TODO: Implenment Prev button for fetchNFTs search-> Keep previous startToken for pagination PREV (should be an array storing all previous nextToken)
 * // TODO: Prev button: "Showing" & "To" increases instead of decreasing
 
----
+----
 
 ## How to use
 
