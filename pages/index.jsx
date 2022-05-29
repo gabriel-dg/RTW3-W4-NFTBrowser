@@ -6,6 +6,7 @@
 // TODO: Use "unknown" value for "Entries" on Collection pagination bar
 // TODO: Implenment Prev button for fetchNFTs search-> Keep previous startToken for pagination PREV (should be an array storing all previous nextToken)
 // TODO: Prev button: "Showing" & "To" increases instead of decreasing
+// TODO: Detect and display mp4 NFTs
 
 
 // import Head from 'next/head'
@@ -26,8 +27,6 @@ const Home = () => {
   const [totNFT, setTotNFT] = useState(0);
   const [prevToken, setPrevToken] = useState("");
 
-  // const startToken = ""; //REVIEW
-
   // ========= To Show/Hide Pagination bar =======
   const [show, setShow] = useState(false);
   // =============================================
@@ -37,7 +36,6 @@ const Home = () => {
     console.log("Fetching NFTs");
     console.log("PageKey: ", pagekey);
 
-    // FIXME: 
     const api_key = process.env.NEXT_PUBLIC_API_KEY;
     const baseURL = `https://eth-mainnet.alchemyapi.io/v2/${api_key}/getNFTs/`;
 
@@ -88,7 +86,6 @@ const Home = () => {
         method: 'GET',
       };
 
-      // FIXME: 
       const api_key = process.env.NEXT_PUBLIC_API_KEY;
       const baseURL = `https://eth-mainnet.alchemyapi.io/v2/${api_key}/getNFTsForCollection/`;
 
@@ -157,15 +154,6 @@ const Home = () => {
 
         }>Let's Search!</button>
       </div>
-
-      {/* TODO: Delete Debug Info */}
-      {/* ============ DEBUG INFO ============== */}
-      {/* <div>
-        <p>Tot NFTS: {NFTsInfo.totalCount}</p>
-        <p>Tot Array: {NFTs.length}</p>
-        <p>PageKey: {NFTsInfo.pageKey}</p> */}
-      {/* </div> */}
-      {/* ====================================== */}
 
       {/* ================= Pagination Bar Start ============== */}
       {show &&
