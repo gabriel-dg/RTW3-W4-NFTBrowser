@@ -37,7 +37,11 @@ const Home = () => {
     console.log("PageKey: ", pagekey);
 
     const api_key = process.env.NEXT_PUBLIC_API_KEY;
-    const baseURL = `https://eth-mainnet.alchemyapi.io/v2/${api_key}/getNFTs/`;
+    // const baseURL = `https://eth-mainnet.g.alchemy.com/nft/v2/${api_key}/getNFTs/`;
+    // const baseURL = `https://polygon-mainnet.g.alchemyapi.io/nft/v2/${api_key}/getNFTs/`;
+    const baseURL = `https://eth-sepolia.g.alchemy.com/nft/v2/${api_key}/getNFTs/`;
+    // const baseURL = `https://polygon-mumbai.g.alchemy.com/nft/v2/${api_key}/getNFTs/`;
+
 
     if (!collection.length) {
       var requestOptions = {
@@ -87,7 +91,10 @@ const Home = () => {
       };
 
       const api_key = process.env.NEXT_PUBLIC_API_KEY;
-      const baseURL = `https://eth-mainnet.alchemyapi.io/v2/${api_key}/getNFTsForCollection/`;
+      // const baseURL = `https://eth-mainnet.g.alchemy.com/nft/v2/${api_key}/getNFTsForCollection/`;
+      // const baseURL = `https://polygon-mainnet.g.alchemyapi.io/nft/v2/${api_key}/getNFTsForCollection/`;
+      const baseURL = `https://eth-sepolia.g.alchemy.com/nft/v2/${api_key}/getNFTsForCollection/`;
+      // const baseURL = `https://polygon-mumbai.g.alchemy.com/nft/v2/${api_key}/getNFTsForCollection/`;
 
       const fetchURL = `${baseURL}?contractAddress=${collection}&withMetadata=${"true"}&startToken=${startToken}`;
       console.log("2-NFTsCollection URL: ", fetchURL)
@@ -131,7 +138,7 @@ const Home = () => {
 
       <div className="flex flex-col w-full justify-center items-center gap-y-2">
 
-        <h1 className="antialiased hover:subpixel-antialiased font-medium leading-tight text-6xl mt-2 mb-5 text-green-700">Alchemy NFTs Browser</h1>
+        <h1 className="antialiased hover:subpixel-antialiased font-medium leading-tight text-6xl mt-2 mb-5 text-green-700">Sepolia NFTs Browser (GdG)</h1>
 
         <input disabled={fetchForCollection} className="w-2/5 bg-slate-100 py-2 px-2 rounded-lg text-gray-800 focus:outline-blue-300 disabled:bg-slate-50 disabled:text-gray-50" onChange={(e) => { setWalletAddress(e.target.value) }} value={wallet} type={("text")} placeholder="Add your Wallet address"></input>
         <input className="w-2/5 bg-slate-100 py-2 px-2 rounded-lg text-gray-800 focus:outline-blue-300 disabled:bg-slate-50 disabled:text-gray-50" onChange={(e) => { setCollectionAddress(e.target.value) }} value={collection} type={("text")} placeholder="Add the Collection address"></input>
@@ -161,8 +168,11 @@ const Home = () => {
         <div className="flex flex-col items-center">
 
           <span className="text-sm text-gray-700 dark:text-gray-500">
-            Showing <span className="font-semibold text-gray-900">{fromNFT}</span> to <span className="font-semibold text-gray-900">{toNFT}</span> of <span className="font-semibold text-gray-900">{NFTsInfo.totalCount}</span> Entries
-          </span>
+            Showing <span className="font-semibold text-gray-900">{fromNFT} </span>
+            to <span className="font-semibold text-gray-900">{toNFT} </span>
+            of <span className="font-semibold text-gray-900">{NFTsInfo.totalCount} </span>
+            Entries</span>
+
           <div className="inline-flex mt-2 xs:mt-0">
 
             <button className="inline-flex items-center py-2 px-4 text-sm font-medium text-white bg-gray-800 rounded-l hover:bg-gray-900 dark:bg-green-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-green-900 dark:hover:text-white"
@@ -206,7 +216,7 @@ const Home = () => {
       {/* ================= Pagination Bar End ============== */}
 
 
-      {/* ======================== Call the NFT Cards =============== */}
+      {/* ======================== Render NFT Cards =============== */}
       <div className='flex flex-wrap gap-y-12 mt-4 w-5/6 gap-x-2 justify-center'>
         {NFTs.length > 0 && NFTs.map(nft => { return (<NFTCard nft={nft}></NFTCard>) })}
       </div>
